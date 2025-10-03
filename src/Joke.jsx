@@ -3,7 +3,7 @@ import axios from 'axios';
 import DisplayJoke from "./DisplayJokes.jsx";
 
 export default function Joke(){
-  const API_URL =window.location.hostname === 'localhost'? '/api/jokes': 'https://full-backend-gamma.vercel.app/';
+  const API_URL =window.location.hostname === 'localhost'? '/api/jokes': 'https://full-backend-gamma.vercel.app/api/jokes';
     let [jokes,setJokes] = useState([]);
   function handleClicked(){
      axios.get(API_URL)
